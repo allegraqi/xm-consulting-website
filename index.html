@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X.M. Consulting | AI Strategy & Technology Intelligence</title>
+  <meta name="description" content="X.M. Consulting is a boutique advisory firm specializing in AI strategy, technology intelligence, AI governance, and research collaboration." />
+  <meta name="theme-color" content="#07182A" />
+  <style>
+    :root{
+      --navy:#07182A;
+      --navy-2:#10263D;
+      --ink:#142033;
+      --muted:#617086;
+      --gold:#D7A739;
+      --gold-2:#F0D58A;
+      --ivory:#FBF8F1;
+      --soft:#F4F1EA;
+      --line:rgba(20,32,51,.12);
+      --white:#FFFFFF;
+      --shadow:0 24px 80px rgba(7,24,42,.16);
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--ivory);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .page{overflow:hidden}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,24,42,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:18px 24px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff}
+    .brand-mark{width:48px;height:48px;border:1px solid rgba(215,167,57,.65);display:grid;place-items:center;border-radius:50%;font-family:var(--serif);font-size:22px;letter-spacing:.04em;color:#fff;background:radial-gradient(circle at 30% 20%,rgba(215,167,57,.22),rgba(7,24,42,.98) 65%)}
+    .brand-text strong{display:block;letter-spacing:.16em;font-size:14px;font-weight:700}.brand-text span{display:block;color:var(--gold-2);font-size:12px;letter-spacing:.28em;margin-top:1px}.nav-links{display:flex;gap:28px;color:rgba(255,255,255,.82);font-size:14px;align-items:center}.nav-links a:hover{color:#fff}.cta{padding:11px 18px;border-radius:999px;background:linear-gradient(135deg,var(--gold),#F2CC72);color:#07182A!important;font-weight:700;box-shadow:0 12px 30px rgba(215,167,57,.25)}
+    .hero{min-height:92vh;position:relative;color:#fff;background:linear-gradient(120deg,rgba(7,24,42,.98),rgba(7,24,42,.82)),url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=80') center/cover;display:flex;align-items:center;padding:132px 24px 80px}
+    .hero:after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(to bottom,rgba(251,248,241,0),var(--ivory));pointer-events:none}.hero-inner{position:relative;z-index:2;max-width:1180px;margin:auto;width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}.eyebrow{color:var(--gold-2);font-size:13px;text-transform:uppercase;letter-spacing:.22em;font-weight:800;margin-bottom:18px}.hero h1{font-family:var(--serif);font-size:clamp(48px,7vw,92px);line-height:.98;margin:0 0 26px;letter-spacing:-.04em}.hero p{font-size:18px;color:rgba(255,255,255,.82);max-width:620px;margin:0 0 34px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:999px;font-weight:800}.button.primary{background:var(--gold);color:var(--navy)}.button.secondary{border:1px solid rgba(255,255,255,.28);color:#fff}.signature-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:28px;padding:28px;backdrop-filter:blur(18px);box-shadow:var(--shadow)}.sig-logo{font-family:var(--serif);font-size:72px;line-height:.9;letter-spacing:.04em}.sig-logo .dot{color:var(--gold)}.sig-cn{color:var(--gold-2);letter-spacing:.45em;margin:10px 0 22px}.sig-card-line{height:1px;background:rgba(255,255,255,.14);margin:22px 0}.sig-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}.sig-row div{padding:16px;border-radius:18px;background:rgba(255,255,255,.07)}.sig-row b{display:block;font-size:18px}.sig-row span{color:rgba(255,255,255,.7);font-size:13px}.section{padding:96px 24px}.container{max-width:1180px;margin:auto}.section-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:42px}.section-kicker{color:#a57412;font-weight:900;letter-spacing:.18em;text-transform:uppercase;font-size:12px}.section h2{font-family:var(--serif);font-size:clamp(34px,5vw,58px);line-height:1.05;margin:10px 0 0;letter-spacing:-.025em}.section-lead{max-width:560px;color:var(--muted);font-size:17px;margin:0}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:0 12px 40px rgba(7,24,42,.05);min-height:260px}.icon{width:44px;height:44px;border-radius:14px;background:rgba(215,167,57,.16);display:grid;place-items:center;color:#9B6D0C;font-size:22px;margin-bottom:24px}.card h3{font-family:var(--serif);font-size:24px;margin:0 0 12px}.card p{color:var(--muted);margin:0}.dark{background:var(--navy);color:#fff;position:relative}.dark:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 0%,rgba(215,167,57,.16),transparent 36%),radial-gradient(circle at 85% 65%,rgba(48,97,142,.22),transparent 34%);pointer-events:none}.dark .container{position:relative;z-index:1}.dark .section-kicker{color:var(--gold-2)}.dark .section-lead,.dark p{color:rgba(255,255,255,.74)}.approach{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.approach-panel{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);border-radius:28px;padding:32px}.steps{display:grid;gap:16px}.step{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}.num{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--navy);font-weight:900}.step h3{margin:0 0 6px;font-size:19px}.step p{margin:0}.split{display:grid;grid-template-columns:.92fr 1.08fr;gap:60px;align-items:start}.story{background:#fff;border:1px solid var(--line);border-radius:32px;padding:34px;box-shadow:var(--shadow)}.story h3{font-family:var(--serif);font-size:34px;margin:0 0 14px}.story p{color:var(--muted)}.meaning{display:grid;gap:14px;margin-top:24px}.meaning-row{display:grid;grid-template-columns:80px 1fr;gap:14px;padding:14px;border-top:1px solid var(--line)}.meaning-row b{font-size:24px}.work-with{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.pill-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px}.pill-card b{display:block;font-size:18px;margin-bottom:6px}.pill-card span{color:var(--muted)}.insights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.post{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:26px;overflow:hidden}.post-img{height:180px;background:linear-gradient(135deg,rgba(215,167,57,.18),rgba(255,255,255,.05)),url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80') center/cover}.post:nth-child(2) .post-img{background-image:linear-gradient(135deg,rgba(215,167,57,.18),rgba(255,255,255,.05)),url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80')}.post:nth-child(3) .post-img{background-image:linear-gradient(135deg,rgba(215,167,57,.18),rgba(255,255,255,.05)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80')}.post-body{padding:22px}.post small{color:var(--gold-2);font-weight:800;text-transform:uppercase;letter-spacing:.12em}.post h3{font-family:var(--serif);font-size:24px;margin:10px 0 10px}.contact{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}.contact-box{background:#fff;border:1px solid var(--line);border-radius:32px;padding:34px;box-shadow:var(--shadow)}.contact-line{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}.contact-line:last-child{border-bottom:0}.contact-line span{color:var(--muted)}footer{background:#05111F;color:rgba(255,255,255,.72);padding:38px 24px}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:24px;align-items:center}.footer-logo{font-family:var(--serif);font-size:34px;color:#fff}.footer-logo .dot{color:var(--gold)}
+    @media(max-width:920px){.nav-links{display:none}.hero-inner,.approach,.split,.contact{grid-template-columns:1fr}.cards,.insights-grid,.work-with{grid-template-columns:1fr 1fr}.hero{min-height:auto}.signature-card{max-width:520px}.section-head{display:block}.section-lead{margin-top:18px}}
+    @media(max-width:620px){.cards,.insights-grid,.work-with,.sig-row{grid-template-columns:1fr}.hero h1{font-size:48px}.section{padding:72px 20px}.hero{padding:118px 20px 70px}.footer-inner{display:block}.nav-inner{padding:14px 18px}.brand-mark{width:42px;height:42px}.brand-text strong{font-size:12px}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand" aria-label="X.M. Consulting home">
+        <div class="brand-mark">X<span style="color:#D7A739">.</span>M</div>
+        <div class="brand-text"><strong>X.M. CONSULTING</strong><span>洵美咨询</span></div>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <a href="#insights">Insights</a>
+        <a class="cta" href="#contact">Let’s Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Insight with integrity · Strategy with impact</div>
+          <h1>Turning Emerging Technologies into Strategic Decisions</h1>
+          <p>X.M. Consulting is a boutique advisory firm specializing in AI strategy, technology intelligence, AI governance, and research-driven decision support for organizations navigating technological change.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#services">Explore Services →</a>
+            <a class="button secondary" href="#about">Our Story</a>
+          </div>
+        </div>
+        <aside class="signature-card">
+          <div class="sig-logo">X<span class="dot">.</span>M<span class="dot">.</span></div>
+          <div class="sig-cn">洵美咨询</div>
+          <p>“Xun Mei” represents a commitment to truth, integrity, and meaningful value — insight that helps organizations make better long-term decisions.</p>
+          <div class="sig-card-line"></div>
+          <div class="sig-row">
+            <div><b>Research</b><span>Evidence-led understanding</span></div>
+            <div><b>Strategy</b><span>Decision-focused direction</span></div>
+            <div><b>Intelligence</b><span>Signals from technology ecosystems</span></div>
+            <div><b>Impact</b><span>Practical value creation</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">What We Do</div><h2>Research. Strategy. Intelligence.</h2></div>
+          <p class="section-lead">We help organizations understand frontier technologies, evaluate strategic options, and translate complex signals into actionable decisions.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">◈</div><h3>AI Strategy</h3><p>Define AI priorities, roadmaps, opportunity areas, and strategic narratives aligned with business and innovation goals.</p></article>
+          <article class="card"><div class="icon">▥</div><h3>Technology Intelligence</h3><p>Monitor frontier AI, semiconductor, infrastructure, startup, research, and policy signals to identify emerging opportunities.</p></article>
+          <article class="card"><div class="icon">◐</div><h3>AI Governance</h3><p>Analyze responsible AI, safety, security, privacy, policy, and compliance trends for enterprise adoption.</p></article>
+          <article class="card"><div class="icon">↔</div><h3>Research Collaboration</h3><p>Support partnership planning across universities, laboratories, startups, and industrial research ecosystems.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="approach">
+      <div class="container approach">
+        <div>
+          <div class="section-kicker">Our Approach</div>
+          <h2>From signals to decisions.</h2>
+          <p class="section-lead">Technology change is noisy. We combine research depth, ecosystem awareness, and strategic judgment to help clients see what matters — and what to do next.</p>
+        </div>
+        <div class="approach-panel steps">
+          <div class="step"><div class="num">1</div><div><h3>Map the landscape</h3><p>Track research, companies, policy, conferences, labs, and infrastructure shifts.</p></div></div>
+          <div class="step"><div class="num">2</div><div><h3>Separate signal from noise</h3><p>Evaluate technology maturity, ecosystem momentum, risks, and strategic relevance.</p></div></div>
+          <div class="step"><div class="num">3</div><div><h3>Translate into action</h3><p>Deliver concise recommendations, collaboration options, and executive-ready narratives.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split">
+        <div class="story">
+          <div class="section-kicker">About X.M.</div>
+          <h3>洵美: insight with integrity.</h3>
+          <p>X.M. Consulting takes inspiration from the Chinese phrase “Xun Mei” — genuine excellence and meaningful value. We believe technology intelligence is not about collecting information; it is about helping organizations make better long-term decisions.</p>
+          <div class="meaning">
+            <div class="meaning-row"><b>洵</b><span>Truthful, sincere, genuine.</span></div>
+            <div class="meaning-row"><b>美</b><span>Excellent, valuable, meaningful.</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="section-kicker">Who We Work With</div>
+          <h2>Built for organizations facing frontier technology decisions.</h2>
+          <div class="work-with" style="margin-top:28px">
+            <div class="pill-card"><b>Enterprises</b><span>AI roadmaps, governance, and strategic technology planning.</span></div>
+            <div class="pill-card"><b>Research Institutions</b><span>Research ecosystem mapping and collaboration strategy.</span></div>
+            <div class="pill-card"><b>Startups & Scale-ups</b><span>Market intelligence, positioning, and strategic narratives.</span></div>
+            <div class="pill-card"><b>Investors</b><span>Technology diligence and frontier ecosystem scanning.</span></div>
+            <div class="pill-card"><b>Public Sector</b><span>AI governance, cybersecurity, and responsible adoption insights.</span></div>
+            <div class="pill-card"><b>Industry Partners</b><span>Semiconductor, AI infrastructure, and platform ecosystem planning.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="insights">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Insights</div><h2>Latest perspectives.</h2></div>
+          <p class="section-lead">A future home for X.M. briefings on AI strategy, governance, infrastructure, policy, and research ecosystems.</p>
+        </div>
+        <div class="insights-grid">
+          <article class="post"><div class="post-img"></div><div class="post-body"><small>AI Strategy</small><h3>From Models to Systems: The Next Wave of AI</h3><p>How enterprise AI is shifting from capability demonstrations to systems, governance, and deployment readiness.</p></div></article>
+          <article class="post"><div class="post-img"></div><div class="post-body"><small>Governance</small><h3>AI Governance in Practice: Building Trust and Value</h3><p>Responsible adoption requires more than policy language — it requires operating models, controls, and accountability.</p></div></article>
+          <article class="post"><div class="post-img"></div><div class="post-body"><small>Technology Intelligence</small><h3>Technology Intelligence Report: Signals to Watch</h3><p>Tracking frontier research, AI infrastructure, semiconductor ecosystems, and strategic collaboration opportunities.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact">
+        <div>
+          <div class="section-kicker">Contact</div>
+          <h2>Let’s build clarity around what comes next.</h2>
+          <p class="section-lead">For advisory, research collaboration, or technology intelligence inquiries, connect with X.M. Consulting.</p>
+        </div>
+        <div class="contact-box">
+          <div class="contact-line"><span>Email</span><b>info@xmconsulting.ca</b></div>
+          <div class="contact-line"><span>Location</span><b>Markham, Ontario, Canada</b></div>
+          <div class="contact-line"><span>Focus</span><b>AI Strategy · Technology Intelligence · AI Governance</b></div>
+          <div class="contact-line"><span>LinkedIn</span><b>X.M. Consulting</b></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-logo">X<span class="dot">.</span>M<span class="dot">.</span></div><div>洵美咨询 · Insight with Integrity</div></div>
+      <div>© <span id="year"></span> X.M. Consulting. All rights reserved.</div>
+    </div>
+  </footer>
+</div>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
