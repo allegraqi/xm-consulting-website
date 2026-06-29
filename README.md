@@ -1,3 +1,3 @@
-# X.M. Consulting Website V2.2
+# X.M. Consulting Website V2.3
 
-Public wording refined. Header logo is now HTML text, so it will not break if SVG paths fail.
+Hero hierarchy refined. Public Our Approach wording fixed.
