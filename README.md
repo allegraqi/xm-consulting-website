@@ -1,5 +1,3 @@
-# X.M. Consulting Website V3
+# X.M. Consulting Website V4 Pixel Match
 
-Homepage rebuilt to match the approved visual mockup.
-
-Upload/commit/push all files including assets/.
+Homepage rebuilt to match the approved mockup, with explicit line breaks for both Chinese and English.
