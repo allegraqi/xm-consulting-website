@@ -1,9 +1,14 @@
-# X.M. Consulting Bilingual Website V1
+# X.M. Consulting Website V2
 
-Upload all files and the `assets` folder to your GitHub repository root.
+Files required in the repository root:
+- index.html
+- style.css
+- script.js
+- assets/ folder
 
-Then enable GitHub Pages:
-Settings → Pages → Deploy from branch → main → /root
+GitHub Pages:
+Settings -> Pages -> Deploy from branch -> main -> /root
 
-Language switch is built into the top-right nav.
-Replace `info@example.com` with your real company email later.
+Important:
+Do not move files out of the assets folder.
+Replace info@example.com with your real email later.

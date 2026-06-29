@@ -1,9 +1,1 @@
-const setLang = (lang) => {
-  document.body.classList.toggle('lang-zh', lang === 'zh');
-  document.body.classList.toggle('lang-en', lang !== 'zh');
-  localStorage.setItem('xm-lang', lang);
-};
-document.querySelectorAll('[data-set-lang]').forEach(btn => {
-  btn.addEventListener('click', () => setLang(btn.dataset.setLang));
-});
-setLang(localStorage.getItem('xm-lang') || 'en');
+function setLang(lang){document.body.classList.toggle('lang-zh',lang==='zh');document.body.classList.toggle('lang-en',lang!=='zh');localStorage.setItem('xm-lang',lang)}document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));setLang(localStorage.getItem('xm-lang')||'en');
