@@ -1,3 +1,5 @@
-# X.M. Consulting Website V2.3
+# X.M. Consulting Website V3
 
-Hero hierarchy refined. Public Our Approach wording fixed.
+Homepage rebuilt to match the approved visual mockup.
+
+Upload/commit/push all files including assets/.
