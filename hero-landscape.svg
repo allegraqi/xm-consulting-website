@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="76" fill="#0B1D33"/>
+<text x="256" y="294" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="170" fill="#F7F1E6" letter-spacing="1">XM</text>
+<circle cx="386" cy="298" r="10" fill="#C6A15B"/>
+<line x1="118" y1="346" x2="396" y2="346" stroke="#C6A15B" stroke-width="8" stroke-linecap="round"/>
+</svg>
