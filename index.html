@@ -3,606 +3,176 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>X.M. Consulting | Research. Strategy. Intelligence.</title>
-  <meta name="description" content="X.M. Consulting is a Canada-based boutique advisory firm specializing in AI strategy, technology intelligence, AI governance, and research-driven decision support." />
-  <style>
-    :root {
-      --navy: #061a33;
-      --navy-2: #0b2748;
-      --gold: #c99a45;
-      --gold-2: #e4bf73;
-      --cream: #f7f3ec;
-      --text: #102033;
-      --muted: #657084;
-      --line: rgba(6, 26, 51, 0.12);
-      --white: #ffffff;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background: var(--cream);
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(247, 243, 236, 0.92);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 18px 26px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .mark {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: var(--navy);
-      color: var(--gold-2);
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      letter-spacing: -0.08em;
-      font-size: 21px;
-      box-shadow: 0 12px 30px rgba(6, 26, 51, 0.18);
-    }
-
-    .brand-text strong {
-      display: block;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 21px;
-      letter-spacing: 0.04em;
-      color: var(--navy);
-      line-height: 1;
-    }
-
-    .brand-text span {
-      display: block;
-      margin-top: 5px;
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      color: var(--navy);
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .cta {
-      padding: 12px 18px;
-      border-radius: 999px;
-      background: var(--navy);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background: radial-gradient(circle at 78% 20%, rgba(201,154,69,0.28), transparent 28%), linear-gradient(135deg, var(--navy) 0%, #07182d 42%, #0a2d52 100%);
-      color: white;
-    }
-
-    .hero:before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(115deg, rgba(6,26,51,0.92) 0%, rgba(6,26,51,0.78) 42%, rgba(6,26,51,0.30) 100%),
-        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2400&q=80');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.95;
-    }
-
-    .hero-inner {
-      position: relative;
-      max-width: 1180px;
-      margin: 0 auto;
-      min-height: 680px;
-      padding: 96px 26px 72px;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: var(--gold-2);
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 500;
-      font-size: clamp(48px, 7vw, 86px);
-      line-height: 0.98;
-      letter-spacing: -0.045em;
-    }
-
-    .gold { color: var(--gold-2); }
-
-    .hero p {
-      margin: 28px 0 34px;
-      max-width: 640px;
-      font-size: 20px;
-      line-height: 1.65;
-      color: rgba(255,255,255,0.86);
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 22px;
-      border-radius: 999px;
-      font-weight: 700;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .button.primary {
-      background: linear-gradient(135deg, var(--gold), var(--gold-2));
-      color: var(--navy);
-      border: none;
-    }
-
-    .button.secondary { color: white; }
-
-    .hero-card {
-      background: rgba(6, 26, 51, 0.72);
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 28px;
-      padding: 34px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.28);
-      backdrop-filter: blur(14px);
-    }
-
-    .principle {
-      display: grid;
-      grid-template-columns: 46px 1fr;
-      gap: 18px;
-      padding: 22px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .principle:last-child { border-bottom: none; }
-
-    .icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(228,191,115,0.6);
-      color: var(--gold-2);
-      font-weight: 800;
-    }
-
-    .principle h3 {
-      margin: 0 0 6px;
-      font-size: 18px;
-    }
-
-    .principle p {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.55;
-      color: rgba(255,255,255,0.74);
-    }
-
-    section {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 86px 26px;
-    }
-
-    .section-head {
-      max-width: 760px;
-      margin-bottom: 34px;
-    }
-
-    .section-head .label {
-      color: var(--gold);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      font-weight: 800;
-      font-size: 12px;
-    }
-
-    h2 {
-      margin: 12px 0 14px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(34px, 4vw, 54px);
-      font-weight: 500;
-      color: var(--navy);
-      letter-spacing: -0.035em;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .service {
-      background: rgba(255,255,255,0.74);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 28px;
-      min-height: 255px;
-      box-shadow: 0 18px 50px rgba(6, 26, 51, 0.06);
-    }
-
-    .service .small-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 13px;
-      background: var(--navy);
-      color: var(--gold-2);
-      display: grid;
-      place-items: center;
-      margin-bottom: 22px;
-      font-weight: 900;
-    }
-
-    .service h3 {
-      margin: 0 0 12px;
-      color: var(--navy);
-      font-size: 19px;
-    }
-
-    .service p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 15px;
-    }
-
-    .band {
-      max-width: none;
-      background: var(--navy);
-      color: white;
-      padding: 0;
-    }
-
-    .band-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 70px 26px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 46px;
-      align-items: center;
-    }
-
-    .band h2 { color: white; }
-
-    .band p {
-      color: rgba(255,255,255,0.74);
-      font-size: 18px;
-      line-height: 1.75;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .stat {
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 20px;
-      padding: 24px;
-      background: rgba(255,255,255,0.04);
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--gold-2);
-      font-size: 30px;
-      margin-bottom: 6px;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    .stat span {
-      color: rgba(255,255,255,0.72);
-      font-size: 14px;
-    }
-
-    .insights {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .insight {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 18px 50px rgba(6, 26, 51, 0.06);
-    }
-
-    .insight-top {
-      height: 8px;
-      background: linear-gradient(90deg, var(--navy), var(--gold));
-    }
-
-    .insight-body { padding: 26px; }
-
-    .insight .tag {
-      color: var(--gold);
-      font-size: 12px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 800;
-    }
-
-    .insight h3 {
-      margin: 12px 0;
-      font-size: 21px;
-      color: var(--navy);
-      line-height: 1.25;
-    }
-
-    .insight p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 15px;
-    }
-
-    .contact {
-      text-align: center;
-      padding-bottom: 96px;
-    }
-
-    .contact-card {
-      background: white;
-      border-radius: 30px;
-      padding: 54px;
-      border: 1px solid var(--line);
-      box-shadow: 0 24px 80px rgba(6, 26, 51, 0.08);
-    }
-
-    .contact-card p {
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.7;
-      max-width: 720px;
-      margin: 0 auto 26px;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 28px 26px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .footer-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 920px) {
-      .links { display: none; }
-      .hero-inner, .band-inner { grid-template-columns: 1fr; }
-      .hero-inner { min-height: auto; }
-      .grid { grid-template-columns: repeat(2, 1fr); }
-      .insights { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 560px) {
-      .nav { padding: 14px 18px; }
-      .hero-inner, section, .band-inner { padding-left: 18px; padding-right: 18px; }
-      .grid, .stats { grid-template-columns: 1fr; }
-      .contact-card { padding: 34px 22px; }
-      .brand-text span { display: none; }
-    }
-  </style>
+  <title>X.M. Consulting | Independent Consulting for Technology Innovation</title>
+  <meta name="description" content="X.M. Consulting is an independent consulting firm founded in Canada in 2024, focused on technology innovation through research, dialogue, and strategic advisory." />
+  <link rel="icon" href="assets/xm-icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;520;650;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header class="topbar">
-    <nav class="nav">
-      <a class="brand" href="#top" aria-label="X.M. Consulting home">
-        <div class="mark">XM</div>
-        <div class="brand-text">
-          <strong>X.M. Consulting</strong>
-          <span>Research · Strategy · Intelligence</span>
-        </div>
-      </a>
-      <div class="links">
-        <a href="#services">Services</a>
-        <a href="#approach">Approach</a>
-        <a href="#insights">Insights</a>
-        <a href="#contact" class="cta">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-inner">
-        <div>
-          <div class="eyebrow">Canada-based AI strategy advisory</div>
-          <h1>Research-driven strategy for the <span class="gold">AI era.</span></h1>
-          <p>X.M. Consulting helps organizations navigate emerging technologies through technology intelligence, AI governance, and research-driven decision support.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#services">Explore Services</a>
-            <a class="button secondary" href="#approach">Our Approach</a>
-          </div>
-        </div>
-        <aside class="hero-card" aria-label="X.M. principles">
-          <div class="principle">
-            <div class="icon">I</div>
-            <div>
-              <h3>Insight with Integrity</h3>
-              <p>We translate complex technology signals into clear, evidence-based judgment.</p>
-            </div>
-          </div>
-          <div class="principle">
-            <div class="icon">S</div>
-            <div>
-              <h3>Strategy with Purpose</h3>
-              <p>We help leaders understand what matters, why it matters, and what to do next.</p>
-            </div>
-          </div>
-          <div class="principle">
-            <div class="icon">R</div>
-            <div>
-              <h3>Research-Driven Advisory</h3>
-              <p>We bridge frontier research, industry ecosystems, and enterprise decision-making.</p>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="section-head">
-        <div class="label">What we do</div>
-        <h2>Advisory for organizations building in the AI-driven future.</h2>
-        <p>We support leaders at the intersection of research, technology, governance, and business strategy.</p>
-      </div>
-      <div class="grid">
-        <article class="service">
-          <div class="small-icon">AI</div>
-          <h3>AI Strategy</h3>
-          <p>Define AI vision, roadmaps, opportunity areas, and strategic priorities aligned with business goals.</p>
-        </article>
-        <article class="service">
-          <div class="small-icon">TI</div>
-          <h3>Technology Intelligence</h3>
-          <p>Track frontier labs, research trends, emerging ecosystems, and market signals to inform decisions.</p>
-        </article>
-        <article class="service">
-          <div class="small-icon">RA</div>
-          <h3>Research Advisory</h3>
-          <p>Bridge academia, industry, and enterprise needs to translate frontier research into opportunities.</p>
-        </article>
-        <article class="service">
-          <div class="small-icon">G</div>
-          <h3>AI Governance</h3>
-          <p>Develop governance, risk, cybersecurity, and responsible AI frameworks for sustainable adoption.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="band" id="approach">
-      <div class="band-inner">
-        <div>
-          <div class="eyebrow">Our approach</div>
-          <h2>From frontier signals to strategic clarity.</h2>
-          <p>We do not simply follow technology trends. We help organizations separate signal from noise, understand the implications of emerging AI capabilities, and make informed decisions with long-term perspective.</p>
-        </div>
-        <div class="stats">
-          <div class="stat"><strong>01</strong><span>Research and ecosystem scanning</span></div>
-          <div class="stat"><strong>02</strong><span>Strategic analysis and opportunity mapping</span></div>
-          <div class="stat"><strong>03</strong><span>Governance and risk interpretation</span></div>
-          <div class="stat"><strong>04</strong><span>Decision support and executive insight</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="insights">
-      <div class="section-head">
-        <div class="label">Focus areas</div>
-        <h2>Where research meets decision-making.</h2>
-        <p>Our initial research focus spans frontier AI labs, AI infrastructure, agent governance, cybersecurity, and technology ecosystems across North America.</p>
-      </div>
-      <div class="insights">
-        <article class="insight">
-          <div class="insight-top"></div>
-          <div class="insight-body">
-            <div class="tag">Frontier AI</div>
-            <h3>Tracking frontier labs and capability shifts</h3>
-            <p>Understanding how model capabilities, product ecosystems, and safety practices reshape enterprise strategy.</p>
-          </div>
-        </article>
-        <article class="insight">
-          <div class="insight-top"></div>
-          <div class="insight-body">
-            <div class="tag">AI Infrastructure</div>
-            <h3>From compute systems to strategic advantage</h3>
-            <p>Interpreting AI infrastructure, chips, systems, and deployment trends for business and R&D planning.</p>
-          </div>
-        </article>
-        <article class="insight">
-          <div class="insight-top"></div>
-          <div class="insight-body">
-            <div class="tag">Governance</div>
-            <h3>Building trust in agentic AI systems</h3>
-            <p>Connecting AI governance, cybersecurity, auditability, and enterprise controls for responsible innovation.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="contact-card">
-        <div class="label">Contact</div>
-        <h2>Let’s turn intelligence into strategy.</h2>
-        <p>X.M. Consulting is currently building its research platform and advisory practice. For collaboration, research briefings, or strategic advisory inquiries, please connect with us on LinkedIn.</p>
-        <a class="button primary" href="https://www.linkedin.com/company/xm-consulting-canada/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <span>© 2026 X.M. Consulting. Canada-based boutique AI strategy advisory.</span>
-      <span>Research. Strategy. Intelligence.</span>
+<body class="lang-en">
+<header class="header">
+  <nav class="nav">
+    <a class="logo" href="#"><img src="assets/xm-logo.svg" alt="X.M. Consulting"></a>
+    <div class="nav-links">
+      <a href="#research"><span class="en">Research</span><span class="zh">研究</span></a>
+      <a href="#community"><span class="en">Community</span><span class="zh">社群</span></a>
+      <a href="#insights"><span class="en">Insights</span><span class="zh">洞察</span></a>
+      <a href="#advisory"><span class="en">Advisory</span><span class="zh">咨询</span></a>
+      <a href="#about"><span class="en">About</span><span class="zh">关于</span></a>
+      <div class="lang-switch"><button data-set-lang="en">EN</button><button data-set-lang="zh">中文</button></div>
+      <a class="btn" href="#contact"><span class="en">Contact</span><span class="zh">联系</span></a>
     </div>
-  </footer>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <div class="kicker en">Independent Consulting for Technology Innovation</div>
+    <div class="kicker zh">成立于加拿大 · 2024</div>
+    <h1 class="en">Independent consulting. Trusted insight.</h1>
+    <h1 class="zh">见真知，<br>而后见未来。</h1>
+    <p class="lead en">X.M. Consulting helps organizations understand technology innovation through research, dialogue, and strategic advisory.</p>
+    <p class="lead zh">洵美咨询关注科技创新与长期趋势，通过研究、交流与战略咨询，连接思想与实践，帮助组织形成可信判断。</p>
+    <div class="hero-actions">
+      <a class="btn" href="#research"><span class="en">Explore our work</span><span class="zh">了解我们</span> →</a>
+      <a class="btn ghost" href="#community"><span class="en">Join the dialogue</span><span class="zh">参与交流</span></a>
+    </div>
+    <div class="wordmark"><span>Truth</span><span>Dialogue</span><span>Insight</span><span>Trust</span></div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-note">
+      <h3 class="en">Technology evolves. Principles endure.</h3>
+      <h3 class="zh">技术会演进，原则会长存。</h3>
+      <p class="en">We believe credibility is built through truth, independence, and long-term thinking.</p>
+      <p class="zh">我们相信，真实、独立与长期主义，是一切可信判断的起点。</p>
+    </div>
+  </div>
+</section>
+
+<section class="banner">
+  <div class="banner-inner">
+    <div>
+      <div class="kicker">X.M. Philosophy</div>
+      <h2 class="en">We create opportunities for meaningful conversations.</h2>
+      <h2 class="zh">我们创造认真交流的机会。</h2>
+    </div>
+    <div class="principles">
+      <div class="principle"><strong>01</strong><h3 class="en">Research</h3><h3 class="zh">研究</h3><p class="en">Understanding before judgment.</p><p class="zh">在判断之前，先建立理解。</p></div>
+      <div class="principle"><strong>02</strong><h3 class="en">Community</h3><h3 class="zh">社群</h3><p class="en">Trust grows through dialogue.</p><p class="zh">信任，在交流中生长。</p></div>
+      <div class="principle"><strong>03</strong><h3 class="en">Advisory</h3><h3 class="zh">咨询</h3><p class="en">Business is an outcome of trust.</p><p class="zh">商业，是信任自然生长的结果。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="research">
+  <div class="section-head">
+    <h2><span class="en">Research Areas</span><span class="zh">研究方向</span></h2>
+    <p class="en">We care about technology innovation, but we are not a technology company. Our work begins with independent inquiry.</p>
+    <p class="zh">我们关心科技创新，但不是科技公司。我们的工作始于真实的研究、开放的交流与长期观察。</p>
+  </div>
+  <div class="grid">
+    <div class="tile"><small>01</small><h3>Artificial Intelligence</h3></div>
+    <div class="tile"><small>02</small><h3>Advanced Computing</h3></div>
+    <div class="tile"><small>03</small><h3>Semiconductors</h3></div>
+    <div class="tile"><small>04</small><h3>Cybersecurity</h3></div>
+    <div class="tile"><small>05</small><h3>Technology Policy</h3></div>
+    <div class="tile"><small>06</small><h3>Emerging Technologies</h3></div>
+  </div>
+</section>
+
+<section class="section" id="community">
+  <div class="split">
+    <div class="panel dark">
+      <div class="kicker">X.M. Dialogues</div>
+      <h3 class="en">A place for people, ideas, and technologies to meet.</h3>
+      <h3 class="zh">让人与思想，在这里相遇。</h3>
+      <p class="en">We organize curated salons, research dialogues, conference debriefs, and community conversations for people who care about technology innovation.</p>
+      <p class="zh">我们策划沙龙、圆桌、会议复盘与深度对话，让研究者、工程师、创业者与决策者围绕科技创新展开真正有意义的交流。</p>
+      <div class="list">
+        <div><strong>X.M. Dialogues</strong> · salons and roundtables</div>
+        <div><strong>X.M. Brief</strong> · research notes and newsletters</div>
+        <div><strong>Conference Debrief</strong> · post-event analysis</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="kicker">Our Role</div>
+      <h3 class="en">We are independent, not a shell for any company.</h3>
+      <h3 class="zh">我们是独立的公司，不作为任何人的壳。</h3>
+      <p class="en">We do not borrow credibility. We do not present unverified partnerships. We only share collaborations, speakers, or institutions when interactions are real and permission is appropriate.</p>
+      <p class="zh">我们不借品牌，不夸大合作，不使用未经许可的名称或标识。所有公开展示的合作、嘉宾与机构，都应真实发生，并获得适当同意。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="insights">
+  <div class="section-head">
+    <h2><span class="en">Insights</span><span class="zh">洞察</span></h2>
+    <p class="en">Our public writing is not marketing. It is a record of how we think.</p>
+    <p class="zh">我们的内容不是营销，而是思考的记录。</p>
+  </div>
+  <div class="insights">
+    <article class="article"><div class="thumb"></div><div class="article-body"><small>X.M. Brief</small><h3 class="en">Technology intelligence beyond trend watching</h3><h3 class="zh">从趋势观察到战略判断</h3><p class="en">Turning weak signals into better decisions.</p><p class="zh">将零散信号转化为可信判断。</p></div></article>
+    <article class="article"><div class="thumb"></div><div class="article-body"><small>Community</small><h3 class="en">Why meaningful dialogue matters</h3><h3 class="zh">为什么真正的交流重要</h3><p class="en">Community is trust infrastructure.</p><p class="zh">社群不是营销，而是信任的基础设施。</p></div></article>
+    <article class="article"><div class="thumb"></div><div class="article-body"><small>Advisory</small><h3 class="en">Research-driven decisions</h3><h3 class="zh">研究驱动的决策</h3><p class="en">Advisory built on evidence and dialogue.</p><p class="zh">以事实和交流为基础的咨询。</p></div></article>
+  </div>
+</section>
+
+<section class="section" id="advisory">
+  <div class="split">
+    <div class="panel">
+      <div class="kicker">Advisory</div>
+      <h3 class="en">Consulting that begins with understanding.</h3>
+      <h3 class="zh">咨询，从理解开始。</h3>
+      <p class="en">We support organizations through technology landscape research, executive briefings, innovation strategy, expert dialogues, and curated community programs.</p>
+      <p class="zh">我们为组织提供技术趋势研究、高管简报、创新战略、专家交流与社群活动策划等咨询服务。</p>
+    </div>
+    <div class="panel dark">
+      <div class="kicker">MVP Services</div>
+      <div class="list">
+        <div><strong>Technology Landscape</strong> · market and research mapping</div>
+        <div><strong>Executive Briefing</strong> · decision-ready insight</div>
+        <div><strong>Community Program</strong> · meetup and dialogue design</div>
+        <div><strong>Strategic Advisory</strong> · long-term innovation planning</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy" id="about">
+  <div class="philosophy-inner">
+    <div><p class="big">洵</p></div>
+    <div>
+      <p class="quote zh">见真知，而后见未来。</p>
+      <p class="quote en">Truth before influence.</p>
+      <p class="zh">“洵”不是装饰性的名字，而是一种原则。对 X.M. 而言，真实、独立、信誉与长期主义，比短期影响力更重要。</p>
+      <p class="en">Founded in Canada in 2024, X.M. Consulting is an independent consulting firm for technology innovation. We believe better decisions come from research, meaningful dialogue, and trust built over time.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <h2><span class="en">Let’s start with a conversation.</span><span class="zh">从一次认真交流开始。</span></h2>
+      <p class="en">For research collaboration, community programs, or strategic advisory inquiries, contact X.M. Consulting.</p>
+      <p class="zh">如果你希望交流研究、策划活动或探讨咨询合作，欢迎联系洵美咨询。</p>
+    </div>
+    <a class="btn gold" href="mailto:info@example.com">info@example.com →</a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div><img src="assets/xm-logo.svg" alt="X.M. Consulting"><p>Independent consulting for technology innovation. Founded in Canada · 2024.</p></div>
+    <div><h4>Explore</h4><p><a href="#research">Research</a></p><p><a href="#community">Community</a></p><p><a href="#insights">Insights</a></p></div>
+    <div><h4>Company</h4><p><a href="#about">About</a></p><p><a href="#contact">Contact</a></p></div>
+    <div><h4>Principles</h4><p>Truth</p><p>Dialogue</p><p>Insight</p><p>Trust</p></div>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
